@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    <OnClick /> ->按下layout觸發效果
+
+    OnSwipe motion:touchAnchorId="@+id/view" //要拖動的元件id
+            motion:dragDirection="dragUp"  //要拖動的方向
+            motion:touchAnchorSide="top"
+motion:dragScale
+如果縮放比例小於1，則控制視圖相對於滑動長度的移動距離。替換為1，表明視圖移動的距離應與滑動距離一致。
+接近移動的距離會遠遠小於滑動距離（例如，dragScale為0.5意味著如果滑動移動4厘米，目標視圖會移動2厘米）。
+如果dragScale大於1，則視圖移動的距離會大於滑動距離（例如，dragScale為1.5意味著如果滑動移動4厘米，目標視圖會移動6厘米）。
+
+motion:maxVelocity
+目標視圖的最大速度。當手指滑動一定速度，目標查看會遵循慣性繼續運作，進行先加速後減速運行（有時情況）。
+如果運動過程中加速到了我們設置的替代（根據我們學的初中那點物理知識可知，能不能達到速度偏移，受加速度（aa），時間（tt）有關，以及初始速度（v0v0），v = v0 + atv = v0 + at），那麼就是先加速，然後按最大速度勻速運動，然後在減速運動。
+motion:maxAcceleration
+目标视图的最大加速度，如果想让View 运动变快，就把加速度调大一点吧
+            />
+-->
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="3000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnSwipe motion:touchAnchorId="@+id/view"
+            motion:dragDirection="dragUp"
+            motion:touchAnchorSide="top"
+            />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/img9"
+            motion:layout_constraintLeft_toRightOf="@+id/img8"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            motion:layout_constraintTop_toBottomOf="@+id/img4"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/img8"
+            motion:layout_constraintLeft_toRightOf="@+id/img7"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            motion:layout_constraintTop_toBottomOf="@+id/img4"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/img7"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            motion:layout_constraintTop_toBottomOf="@+id/img4"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/img1"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/img2"
+            motion:layout_constraintLeft_toRightOf="@+id/img1"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/img3"
+            motion:layout_constraintLeft_toRightOf="@+id/img2"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/img4"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintLeft_toRightOf="@id/img3" />
+        <Constraint
+            android:id="@+id/img5"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            motion:layout_constraintTop_toBottomOf="@+id/img1"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintLeft_toRightOf="@id/img4" />
+        <Constraint
+            android:id="@+id/img6"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintLeft_toRightOf="@id/img5" />
+    </ConstraintSet>
+</MotionScene>

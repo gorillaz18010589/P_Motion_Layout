@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="3000">
+
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchAnchorSide="@id/ball1"/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+        android:layout_height="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="32dp"
+        motion:layout_constraintTop_toTopOf="parent"
+        motion:layout_constraintRight_toRightOf="parent"
+        android:layout_width="100dp"
+        android:id="@+id/ball1" />
+
+
+        <Constraint
+            android:layout_height="100dp"
+            android:layout_marginRight="108dp"
+            android:layout_marginTop="456dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            android:layout_width="100dp"
+            android:id="@+id/ball2" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="100dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="484dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            android:layout_width="100dp"
+            android:id="@+id/ball2" />
+        <Constraint
+            android:layout_height="100dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="592dp"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="100dp"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/ball1" />
+    </ConstraintSet>
+</MotionScene>

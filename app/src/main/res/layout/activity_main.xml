@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/ball1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ball"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/ball2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ball"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn"
+            android:onClick="toPageImagViewMotion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="toPageImagViewMotion"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn2"
+            android:onClick="toPageIcons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="toPageIcons"
+            android:textAllCaps="false"
+            />
+
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn3"
+            android:onClick="toKeyFrameSet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="toKeyFrameSet"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linBar"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn4"
+            android:onClick="toPageImagViewFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="toPageImagViewFilter"
+            android:textAllCaps="false"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
+

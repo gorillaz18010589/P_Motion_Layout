@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:padding="10dp"
+    app:layoutDescription="@xml/activity_positioning_icons_scene"
+    tools:context=".PositioningIconsActivity">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:padding="10dp"
+        android:scaleType="center"
+        android:src="@drawable/icon1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:padding="10dp"
+        android:scaleType="center"
+        android:src="@drawable/icon1"
+        app:layout_constraintLeft_toRightOf="@+id/img1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:padding="10dp"
+        android:scaleType="center"
+        android:src="@drawable/icon1"
+        app:layout_constraintLeft_toRightOf="@+id/img2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:padding="10dp"
+        android:scaleType="center"
+        android:src="@drawable/icon1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img1" />
+
+
+    <ImageView
+        android:id="@+id/img5"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:padding="10dp"
+        android:scaleType="center"
+        android:src="@drawable/icon1"
+        app:layout_constraintLeft_toRightOf="@+id/img4"
+        app:layout_constraintTop_toBottomOf="@+id/img1" />
+
+
+    <ImageView
+        android:id="@+id/img6"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:padding="10dp"
+        android:scaleType="center"
+        android:src="@drawable/icon1"
+        app:layout_constraintLeft_toRightOf="@+id/img5"
+        app:layout_constraintTop_toBottomOf="@+id/img1" />
+
+
+    <ImageView
+        android:id="@+id/img7"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:padding="10dp"
+        android:scaleType="center"
+        android:src="@drawable/icon1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img4" />
+
+
+    <ImageView
+        android:id="@+id/img8"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:padding="10dp"
+        android:scaleType="center"
+        android:src="@drawable/icon1"
+        app:layout_constraintLeft_toRightOf="@+id/img7"
+        app:layout_constraintTop_toBottomOf="@+id/img4" />
+
+    <ImageView
+        android:id="@+id/img9"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:padding="10dp"
+        android:scaleType="center"
+        android:src="@drawable/icon1"
+        app:layout_constraintLeft_toRightOf="@+id/img8"
+        app:layout_constraintTop_toBottomOf="@+id/img4" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/icon1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
